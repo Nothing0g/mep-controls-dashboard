@@ -4,30 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Portfolio-ready MEP project controls dashboard and risk register." />
-    <title>MEP Controls / Portfolio Command Centre</title>
+    <title>Field / Ctrl — MEP project controls</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="app-shell">
       <aside class="sidebar">
-        <div class="brand"><span class="brand-mark">MC</span><div><strong>MEP Controls</strong><small>Portfolio command centre</small></div></div>
-        <div class="sidebar-label">WORKSPACE</div>
+        <div class="brand"><span class="brand-mark"><i></i><i></i><i></i></span><div><strong>FIELD / CTRL</strong><small>MEP delivery intelligence</small></div></div>
+        <div class="site-stamp"><span>CASE 026</span><strong>DELIVERY<br />CONTROL ROOM</strong><small>New Delhi · India</small></div>
+        <div class="sidebar-label">OPERATING VIEWS</div>
         <nav id="navTabs" class="nav-tabs" aria-label="Dashboard sections">
-          <button class="nav-tab active" data-tab="overview"><span>◈</span> Overview</button>
-          <button class="nav-tab" data-tab="schedule"><span>◷</span> Schedule control</button>
-          <button class="nav-tab" data-tab="cost"><span>◒</span> Cost & resources</button>
-          <button class="nav-tab" data-tab="risks"><span>△</span> Risk register</button>
-          <button class="nav-tab" data-tab="actions"><span>☷</span> Actions & dependencies</button>
+          <button class="nav-tab active" data-tab="overview"><span>01</span> Portfolio signal</button>
+          <button class="nav-tab" data-tab="schedule"><span>02</span> Schedule drift</button>
+          <button class="nav-tab" data-tab="cost"><span>03</span> Cost / capacity</button>
+          <button class="nav-tab" data-tab="risks"><span>04</span> Risk register</button>
+          <button class="nav-tab" data-tab="actions"><span>05</span> Action ledger</button>
         </nav>
-        <div class="sidebar-foot"><div class="pulse"></div><span>Sample portfolio data</span><small>Built for project controls review</small></div>
+        <div class="sidebar-foot"><div class="pulse"></div><span>Sample portfolio / live model</span><small>Designed as a project-controls case study</small></div>
       </aside>
       <main class="main-content">
-        <header class="topbar"><div><p class="eyebrow">MEP / CONTROL TOWER <span class="live-dot"></span></p><h1 id="pageTitle">Portfolio overview</h1></div><div class="topbar-right"><label class="select-wrap"><span>Portfolio</span><select id="projectFilter"><option value="all">All projects</option><option value="NEXUS">Nexus Tower</option><option value="ORBIT">Orbit Data Centre</option></select></label><button class="export-btn" id="exportBtn">Export snapshot ↗</button></div></header>
+        <header class="topbar"><div><p class="eyebrow">FIELD NOTE <span class="live-dot"></span> 22 OCT 2026</p><h1 id="pageTitle">Portfolio signal</h1></div><div class="topbar-right"><div class="topbar-note"><span>CONTROL WINDOW</span><strong>W43 / 2026</strong></div><label class="select-wrap"><span>VIEWPORT</span><select id="projectFilter"><option value="all">All projects</option><option value="NEXUS">Nexus Tower</option><option value="ORBIT">Orbit Data Centre</option></select></label><button class="export-btn" id="exportBtn">Export snapshot <b>↗</b></button></div></header>
+        <div class="command-line"><span>PORTFOLIO / MEP</span><span class="command-rule"></span><span>READOUT <b>05:42 PM</b></span></div>
         <div id="app" class="page"></div>
-        <footer class="footer"><span>MEP Controls Dashboard</span><span>Prepared as a portfolio case study · Last refresh <b id="refreshTime"></b></span></footer>
+        <footer class="footer"><span>FIELD / CTRL <em>—</em> MEP controls dashboard</span><span>Portfolio case study · Last refresh <b id="refreshTime"></b></span></footer>
       </main>
     </div>
     <script src="app.js"></script>
