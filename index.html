@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio-ready MEP project controls dashboard and risk register." />
+    <title>MEP Controls / Portfolio Command Centre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand"><span class="brand-mark">MC</span><div><strong>MEP Controls</strong><small>Portfolio command centre</small></div></div>
+        <div class="sidebar-label">WORKSPACE</div>
+        <nav id="navTabs" class="nav-tabs" aria-label="Dashboard sections">
+          <button class="nav-tab active" data-tab="overview"><span>◈</span> Overview</button>
+          <button class="nav-tab" data-tab="schedule"><span>◷</span> Schedule control</button>
+          <button class="nav-tab" data-tab="cost"><span>◒</span> Cost & resources</button>
+          <button class="nav-tab" data-tab="risks"><span>△</span> Risk register</button>
+          <button class="nav-tab" data-tab="actions"><span>☷</span> Actions & dependencies</button>
+        </nav>
+        <div class="sidebar-foot"><div class="pulse"></div><span>Sample portfolio data</span><small>Built for project controls review</small></div>
+      </aside>
+      <main class="main-content">
+        <header class="topbar"><div><p class="eyebrow">MEP / CONTROL TOWER <span class="live-dot"></span></p><h1 id="pageTitle">Portfolio overview</h1></div><div class="topbar-right"><label class="select-wrap"><span>Portfolio</span><select id="projectFilter"><option value="all">All projects</option><option value="NEXUS">Nexus Tower</option><option value="ORBIT">Orbit Data Centre</option></select></label><button class="export-btn" id="exportBtn">Export snapshot ↗</button></div></header>
+        <div id="app" class="page"></div>
+        <footer class="footer"><span>MEP Controls Dashboard</span><span>Prepared as a portfolio case study · Last refresh <b id="refreshTime"></b></span></footer>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
